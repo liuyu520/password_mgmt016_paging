@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<models>
+    <model id="deptModel" class="com.test.excel.jn.model.DeptModel">
+
+        <property name="deptName" column="1" excelTitleName="部门名称"
+                  dataType="String" maxLength="15" default="" isHasBGColor="true"
+                  defaultBGColor="" backgroundColor="">
+            <bgcolor_map>
+                <entry bean_key="deptName_1" bg_color="red"></entry>
+                <entry bean_key="deptName_2" bg_color="bright_green"></entry>
+            </bgcolor_map>
+        </property>
+        <property name="deptCode" column="2" excelTitleName="部门编号"
+                  dataType="String" maxLength="15" default="abc"/>
+        <property name="sendFileName" column="4" excelTitleName="发文简称"
+                  dataType="String" maxLength="15" isConvertable="true" default="C">
+            <value_map>
+                <entry excel_key="永久" bean_value="c"></entry>
+                <entry excel_key="长期1" bean_value="send_1"></entry>
+                <entry excel_key="长期2" bean_value="send_2"></entry>
+                <entry excel_key="长期3" bean_value="send_3"></entry>
+                <entry excel_key="长期4" bean_value="send_4"></entry>
+                <entry excel_key="长期5" bean_value="send_5"></entry>
+            </value_map>
+        </property>
+        <property name="deptNo" column="3" excelTitleName="编号"
+                  dataType="String" maxLength="15" default="10"/>
+    </model>
+    <!-- <property name="value_status" column="1" excelTitleName="值状态" dataType="String"
+        maxLength="15" default="" /> -->
+    <model id="requestArgBean" class="com.mbs.bean.RequestArgBean">
+
+        <property name="h_sys_type" column="1" excelTitleName="操作系统类型"
+                  dataType="String" maxLength="15" default=""/>
+        <property name="h_sys_version" column="2" excelTitleName="操作系统版本"
+                  dataType="String" maxLength="15" default=""/>
+        <property name="h_client_version" column="3" excelTitleName="客户端版本"
+                  dataType="String" maxLength="15" default=""/>
+        <property name="h_device_model" column="4" excelTitleName="设备类型"
+                  dataType="String" maxLength="15" default=""/>
+        <property name="client_version_sign" column="5"
+                  excelTitleName="客户端自检信息" dataType="String" maxLength="15" default=""/>
+        <property name="IMEI" column="6" excelTitleName="国际设备识别码"
+                  dataType="String" maxLength="15" default=""/>
+        <property name="IMSI" column="7" excelTitleName="国际用户识别码"
+                  dataType="String" maxLength="15" default=""/>
+        <property name="blueTooth_mac" column="8" excelTitleName="蓝牙地址"
+                  dataType="String" maxLength="15" default=""/>
+        <property name="wifi_address" column="9" excelTitleName="无线地址"
+                  dataType="String" maxLength="15" default=""/>
+        <property name="client_nonce" column="10" excelTitleName="客户端随机数"
+                  dataType="String" maxLength="15" default=""/>
+    </model>
+
+    <model id="resultBean" class="com.mbs.bean.ResultBean">
+        <property name="status" column="1" excelTitleName="status"
+                  dataType="String" maxLength="15" default=""/>
+        <property name="message" column="2" excelTitleName="message"
+                  dataType="String" maxLength="15" default=""/>
+        <property name="selfCheckResult" column="3" excelTitleName="selfCheckResult"
+                  dataType="String" maxLength="15" default=""/>
+        <property name="remoteInvalidationResult" column="4"
+                  excelTitleName="remoteInvalidationResult" dataType="String"
+                  maxLength="15" default=""/>
+        <property name="hasHighClientVersion" column="5"
+                  excelTitleName="hasHighClientVersion" dataType="String" maxLength="15"
+                  default=""/>
+        <property name="lastClientVersion" column="6" excelTitleName="lastClientVersion"
+                  dataType="String" maxLength="15" default=""/>
+        <property name="lastClientVersionSummary" column="7"
+                  excelTitleName="lastClientVersionSummary" dataType="String"
+                  maxLength="15" default=""/>
+        <property name="forceUpdate" column="8" excelTitleName="forceUpdate"
+                  dataType="String" maxLength="15" default=""/>
+    </model>
+    <model id="pass" class="com.pass.bean.Pass">
+        <property name="id" column="1" excelTitleName="NO" dataType="Integer" maxLength="15" defaultValue=""
+                  isConvertable="false" isHasBGColor="false"/>
+        <property name="title" column="2" excelTitleName="标题" dataType="String" maxLength="15" defaultValue=""
+                  isConvertable="false" isHasBGColor="false"/>
+        <property name="username" column="3" excelTitleName="用户名" dataType="String" maxLength="15" defaultValue=""
+                  isConvertable="false" isHasBGColor="false"/>
+        <property name="pwd" column="4" excelTitleName="密码" dataType="String" maxLength="15" defaultValue=""
+                  isConvertable="false" isHasBGColor="false"/>
+        <property name="description" column="5" excelTitleName="描述" dataType="String" maxLength="15" defaultValue=""
+                  isConvertable="false" isHasBGColor="false"/>
+    </model>
+</models>
